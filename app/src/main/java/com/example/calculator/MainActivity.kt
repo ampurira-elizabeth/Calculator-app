@@ -15,9 +15,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var etNumber:EditText
     lateinit var etNumber2:EditText
     lateinit var tvadd:TextView
-    lateinit var tvminus:TextView
-    lateinit var tvtimes:TextView
-    lateinit var tvmodulus:TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,9 +22,7 @@ class MainActivity : AppCompatActivity() {
         etNumber=findViewById(R.id.etNumber)
         etNumber2=findViewById(R.id.etNumber2)
         tvadd=findViewById(R.id.tvadd)
-        tvminus=findViewById(R.id.tvminus)
-        tvtimes=findViewById(R.id.tvtimes)
-        tvmodulus=findViewById(R.id.tvmodulus)
+
 
 
         btnAdd=findViewById(R.id.btnAdd)
@@ -69,14 +64,14 @@ class MainActivity : AppCompatActivity() {
     }
     fun subtraction(firsnumb:Int,secondnumb:Int){
         var subtract=firsnumb-secondnumb
-        tvminus.text=subtract.toString()
+        tvadd.text=subtract.toString()
     }
     fun multiplication(firsnumb:Int,secondnumb:Int){
         var multiply=firsnumb*secondnumb
-        tvtimes.text=multiply.toString()
+        tvadd.text=multiply.toString()
     }
     fun division(firsnumb:Int,secondnumb:Int){
         var divide=firsnumb%secondnumb
-        tvmodulus.text=divide.toString()
+        tvadd.text=divide.toString()
     }
 }
